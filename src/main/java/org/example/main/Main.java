@@ -9,7 +9,11 @@ public class Main {
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
         Parrot parrot = context.getBean(Parrot.class);
+        String hello = context.getBean(String.class);
+        Integer ten = context.getBean(Integer.class);
 
         System.out.println(parrot.getName());
+        System.out.println(hello);
+        System.out.println(ten);
     }
 }
