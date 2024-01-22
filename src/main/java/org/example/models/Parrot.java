@@ -3,7 +3,7 @@ package org.example.models;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Component;
 
-@Component
+// @Component
 public class Parrot {
     private String name;
 
@@ -15,8 +15,10 @@ public class Parrot {
         this.name = name;
     }
 
+    /*
     @PostConstruct
     private void postConstruct() {
         this.setName("Koko");
     }
+    */
 }

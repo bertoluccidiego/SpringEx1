@@ -8,9 +8,13 @@ public class Main {
     public static void main(String[] args) {
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
+        Parrot x = new Parrot();
+        x.setName("Kiki");
+
+        context.registerBean("parrot", Parrot.class, () -> x);
+
         Parrot parrot = context.getBean(Parrot.class);
 
-        System.out.println(parrot);
         System.out.println(parrot.getName());
     }
 }
