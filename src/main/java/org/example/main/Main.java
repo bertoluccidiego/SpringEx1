@@ -10,6 +10,7 @@ public class Main {
 
         Parrot parrot = context.getBean(Parrot.class);
 
+        System.out.println(parrot);
         System.out.println(parrot.getName());
     }
 }
